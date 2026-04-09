@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Code Editor with Explanation</title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Simple Code Editor</div>
+            <div class="controls">
+                <button class="btn" id="runBtn">Run Code</button>
+                <button class="btn" id="clearBtn">Clear All</button>
+                <button class="btn" id="explainBtn">Explain Code</button>
+            </div>
+        </div>
+        
+        <div class="editor-area">
+            <div class="code-section mobile-active">
+                <div class="code-tabs">
+                    <button class="code-tab active" data-tab="html">HTML</button>
+                    <button class="code-tab" data-tab="css">CSS</button>
+                    <button class="code-tab" data-tab="js">JavaScript</button>
+                </div>
+                <textarea class="code-editor" id="htmlEditor" placeholder="Write your HTML code here..."></textarea>
+                <textarea class="code-editor" id="cssEditor" placeholder="Write your CSS code here..." style="display: none;"></textarea>
+                <textarea class="code-editor" id="jsEditor" placeholder="Write your JavaScript code here..." style="display: none;"></textarea>
+            </div>
+            
+            <div class="output-section">
+                <div class="output-header">
+                    <span>Output Preview</span>
+                    <button class="mobile-back-btn" id="outputBackBtn">Back to Editor</button>
+                </div>
+                <iframe class="output-frame" id="outputFrame" title="Output Preview"></iframe>
+            </div>
+            
+            <div class="explain-section">
+                <div class="explain-header">
+                    <span>Code Explanation</span>
+                    <button class="explain-toggle" id="toggleExplain">Hide</button>
+                    <button class="mobile-back-btn" id="explainBackBtn">Back to Editor</button>
+                </div>
+                <div class="explain-content" id="explainContent">
+                    Click "Explain Code" to see explanations of your HTML, CSS, or JavaScript code.
+                    Write code in any editor, then click the button to get a simple explanation.
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar" id="statusBar">
+            Ready. Write HTML, CSS, and JavaScript code, then click "Run Code".
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
